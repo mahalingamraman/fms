@@ -4,7 +4,8 @@ import githubReducer from './githubReducer';
 import loginReducer from './loginReducer';
 const rootReducer = combineReducers({
 	mahaData : githubReducer,
-	loginReducer: loginReducer
+	loginReducer: loginReducer,
+	
 });
 
 export default rootReducer;

@@ -15,6 +15,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Form from 'react-bootstrap/Form';
 
+import { IoIosTrash, IoIosArrowDroprightCircle, IoIosAddCircle } from "react-icons/io";
+import { IconContext } from "react-icons";
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+
 class Quality extends React.Component {
 
   constructor(props) {
@@ -105,7 +109,14 @@ class Quality extends React.Component {
      <Row>
                 <Col>
                 <Button  id="proceedToVel" type="submit" className="pull-right"
-                                                onClick={this.handleClick} >Next</Button>
+                                                onClick={this.handleClick} >
+                                                <IconContext.Provider value={{ className: "global-class-name" }}>
+                                                <div>
+                                                
+                                                <IoIosArrowDroprightCircle size="25px"/>
+                                                </div>
+                                              </IconContext.Provider>
+                                              </Button>
                      
                 </Col></Row></Card.Footer></Card></div>
       </div>
@@ -147,7 +158,14 @@ class ProductTable extends React.Component {
       <div>
 
 
-      <button type="button" onClick={this.props.onRowAdd} className="btn btn-success pull-right">Add</button>
+      <button type="button" onClick={this.props.onRowAdd} className="btn btn-success pull-right">
+      <IconContext.Provider value={{ className: "global-class-name" }}>
+                                                <div>
+                                                
+                                                <IoIosAddCircle size="25px"/>
+                                                </div>
+                                              </IconContext.Provider>
+      </button>
         <table className="table table-bordered">
           <thead>
             <tr>
@@ -176,7 +194,20 @@ class ProductRow extends React.Component {
 
   }
   render() {
-
+    const renderTooltip = props => (
+      <div
+        {...props}
+        style={{
+          backgroundColor: 'whitesmoke',
+          padding: '2px 10px',
+          color: 'black',
+          borderRadius: 3,
+          ...props.style,
+        }}
+      >
+        Delete
+      </div>
+    );
     return (
       <tr className="eachRow">
         <EditableCell onProductTableUpdate={this.props.onProductTableUpdate} cellData={{
@@ -191,7 +222,20 @@ class ProductRow extends React.Component {
         }}/>
       
         <td className="del-cell">
-          <input type="button" className="removeRow" onClick={this.onDelEvent.bind(this)} value="&times;" className="del-btn"/>
+        <OverlayTrigger
+            placement="right-start"
+            delay={{ show: 250, hide: 400 }}
+            overlay={renderTooltip}
+          >
+          <Button className="remove-btn" onClick={this.onDelEvent.bind(this)} value="Remove" >
+                <IconContext.Provider value={{ className: "global-class-name" }}>
+                <div>
+                
+                  <IoIosTrash size="30px"  />
+                </div>
+              </IconContext.Provider>
+            </Button>
+        </OverlayTrigger>
         </td>
       </tr>
     );

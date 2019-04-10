@@ -1,0 +1,77 @@
+.rbutton{
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: goldenrod;
+    padding: 20px 30px 30px 30px;
+    font-size: 18px;
+    outline:none;
+    display:block;
+    opacity: 0.8;
+  }
+  
+  .rcbutton{
+    text-align: center;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: none;
+    background-color: cadetblue;
+    color: black;
+    padding: 20px 30px 30px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    outline:none;
+    display:block;
+    opacity: 0.9;
+    box-shadow: 0 19px 19px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+  }
+  .rbutton:hover{
+    background-color: goldenrod;
+    color: white;
+    border:none;
+    outline:none;
+  }
+  .rbutton:focus {
+    border: none;
+    outline: none;
+}
+.rcbutton:hover{
+  background-color: goldenrod;
+  color: white;
+  border:none;
+  outline:none;
+}
+.rcbutton:focus {
+  border: none;
+  outline: none;
+}
+
+
+button.change {
+    background-color: #F88F00;
+    border: none;
+    height: 40px;
+    padding: 5px 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-right: 10px;
+    }
+    
+    button.change:hover {
+    cursor: pointer;
+    background-color: #F89900;
+    }
+    
+    button:active {
+    outline: none;
+    border: none;
+    }
+    
+    button:focus {outline:0;}

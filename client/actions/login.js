@@ -1,11 +1,9 @@
-import {USERNAME } from '../constants/LoginConstants'
+import {USERNAME } from '../constants/loginConstants'
 
-export function validateUsername(userName) {
-	console.log(userName);
-	return (dispatch) => {
+ export function validateUsername(userName) {
+  return (dispatch) => {
 		dispatch ({
-		 type: USERNAME,
-		 userName: userName
-		});
-	}
-}
+     type: USERNAME,
+     userName: userName
+   });}
+ }

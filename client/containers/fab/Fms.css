@@ -1,0 +1,288 @@
+.Datepick{
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    text-decoration-color: navajowhite
+}
+.wrapper{
+   margin-top: 2cm;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+.Cardtop{
+ margin-top: 1cm;
+    color:goldenrod;
+    opacity: 0.8;
+    
+}
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+  background-image: url("http://hdwpro.com/wp-content/uploads/2018/01/hd-blur-wallpaper.jpg");
+ 
+  background-repeat: no-repeat;
+  
+  
+}
+.icon{
+  background-image: url("https://static1.squarespace.com/static/5aa21009f8370aea812b0d0f/t/5add576b8a922d433d0725d0/1524455283443/excavator.png?format=100w");
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+}
+.icon1{
+  background-image: url("http://landmachinery.net/wp-content/uploads/2016/11/excavator-4-100x100.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+}
+.icon2{
+  background-image: url("https://img.icons8.com/ios/2x/forwarder-filled.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+}
+.Container2 {
+    width: 960px;
+    position: relative;
+    margin:0 auto;
+    line-height: 1.4em;
+    }
+    
+.fcenter{
+    display: 'flex';
+    justify-Content:'center';
+       align-Items:'center'; 
+       
+}
+.CardBody{
+
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+}
+
+.bgclr{
+  background-color:azure;
+}
+
+.CardBody_velocity{
+  
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+.FormBody{
+    margin-left: 0cm;
+    margin-right: 0cm;
+}
+.TableBody{
+  margin-left: 0.5cm;
+  margin-right: 0.5cm;
+}
+
+.down{
+  margin-top: 1cm;
+}
+
+.CardHead{
+    
+    background-color: goldenrod;
+    color:black;
+    align-self: auto;
+    font-size: 0.5cm;
+    font-weight: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.TableCardHead{
+  margin-top: 1cm;
+  margin-left: 0.5cm;
+    margin-right: 0.5cm;
+  background-color: goldenrod;
+  color:black;
+  align-self: auto;
+  font-size: 0.5cm;
+  font-weight: 20;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.CardHead_velocity{
+    height:70px;
+    text-align: center;
+    background-color: goldenrod;
+    color:black;
+    align-self: auto;
+    font-size: 0.7cm;
+    font-weight: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+.TextBox{
+  
+    width:400px;
+    border: 1px solid yellowgreen;
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
+  padding: 12px 5px 12px 10px;
+}
+
+.Label{
+    margin-left: 1cm;
+    
+}
+
+.Btncolor{
+    background-color: yellowgreen;
+    color:white;
+}
+.rows .row {
+    display: inline;
+ }
+
+  .button {
+    padding: 105px 40px 20px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color:goldenrod;
+    border:none;
+    color: white;
+    box-shadow: none;
+    
+    font-size: 16px;
+    
+    width: 200px;
+    height: 130px;
+   outline:none;
+   opacity: 0.8;
+    cursor: pointer;
+    margin: 25px;
+    
+   
+  
+    
+  }
+  .button:hover {
+    background-color: goldenrod;
+    border:none ;/* Green */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+ 
+.PeopleCardTop{
+  margin-top: 1cm;
+  margin-left: 1cm;
+    margin-right: 1cm;
+    color:goldenrod;
+   
+}
+   
+.PeopleCardHead{
+    
+  background-color: goldenrod;
+  color:black;
+  align-self: auto;
+  font-size: 0.5cm;
+  font-weight: 20;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+  
+ 
+  
+  
+ 
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#263238;
+    color: gray;
+    text-align: center;
+ }
+
+ .Bhlhead{
+  height:60px;
+  text-align: center;
+  background-color: goldenrod;
+  margin-top: 1cm;
+  color:black;
+  align-self: auto;
+  font-size: 0.5cm;
+  font-weight: 1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+ }
+
+ .Bhlbody{
+ 
+  margin-left: 1cm;
+  margin-right: 1cm;
+ }
+
+ .Groupbutton{
+   width: '50%'
+ }
+ .Welcomeimage{
+   
+   /* Control the height of the image */
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+ }
+.frameimage{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.7;
+  
+}
+ .Bgimg {
+  /* The image used */
+  background-image: url("http://www.seekgif.com/uploads/nature-tree-blurry-background-3.jpg");
+
+  /* Control the height of the image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.velocitybtn{
+  margin-top: 1cm;
+  background-color: goldenrod;
+  border: None;
+  
+}
+
+.btnwide{
+  background-color: goldenrod;
+  border:none
+}
+.btnwidex{
+  background-color: cadetblue;
+  border:none
+}
+.btnwidey{
+  background-color: goldenrod;
+  border:none
+}
+.velocitybtn:hover{
+  background-color: cadetblue;
+  color: white;
+}
+

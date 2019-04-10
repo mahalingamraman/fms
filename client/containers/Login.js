@@ -1,62 +1,127 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Button  from 'react-bootstrap/Button';
+import '../css/Login.css';
+import Form from 'react-bootstrap/Form';
 import * as LoginActions from '../actions/login'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import "../css/login.css";
+import { Redirect } from 'react-router';
 
-class Login extends Component{
- constructor(props, context) {
-    super(props, context);
-	this.state = {
-      email: this.props.email || ''
-    }
+function validateForm(username) {
+  const errors = [];
+ 
+  const user="lptMachine";
+
+    if(username.length===0 || username.toUpperCase()!==user.toUpperCase() )
+     { 
+       errors.push("Enter the valid user name");
+     
+     }
+     
+    return errors;
   }
+      
+
+
+class Login extends Component {
+  constructor(props,context) {
+    super(props,context);
+          //newly added
+
+    this.state = {
+      user: this.props.user || '',
+     errors:[],
+     isEnabled:false,
+      };
+  }
+ 
+ 
   handleChange(e) {
 	console.log(e.target.value);
-    this.setState({ email: e.target.value })
-  }
-  
-  validateForm() {
-    return this.state.email.length > 0 && this.state.password.length > 0;
+    this.setState({ user : e.target.value })
   }
 
+  handleSubmit = event => {
+    this.props.actions.validateUsername(this.state.user);
 
-  handleSubmit( event ) {
-    event.preventDefault();
+    const {username}=this.state;
+    const errors = validateForm(this.state.user);
+    if (errors.length > 0) {
+      this.setState({ errors });
+       return;
+    }
+    else{
+      this.setState({redirect:true});
+  }
+  alert(`Signed up with username: ${username} `);
+  event.preventDefault();
+/*
+  let isValidUser = this.props.login.isValidUser ?'Valid User':'Invalid USer';
+    if(isValidUser==='Valid User')
+    {this.setState({redirect:true})}
+   */
+    
+  }
+  handleOnClick = () => {
+    // some action...
+    // then redirect
+    
+   
   }
 
 render(){
-  let isValidUser = this.props.login.isValidUser ?'Valid User':'Invalid USer';
-  return(
-        <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-            <label>Email</label>
-            <FormControl
-              autoFocus
-              type="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
-        </form>
-      </div>
-      );
+  //redirect is not working
+  if (this.state.redirect) {
+    return <Redirect push to="/home" />;
   }
-  };
+  const {user}=this.state;
+  const isEnabled = user.length!==0;
+    const { errors } = this.state;
+  return (
+    <div className="wrap-login">
+        <div className="loginmodal-container">
+                   
+            <h1> Login to Your Account</h1>
+           
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group >
+                  {errors.map(error => (
+                      <p key={error}>{error}</p>
+                    ))}
+                  
+                  <Form.Control
+                    placeholder="Username"
+                    type="input"
+                    value={this.state.username}
+                    onChange={this.handleChange.bind(this)}            //should not be this.state.handleChange  /*{this.props.login.userName} is used to get the value entered by the user*/
+                    /> 
+               </Form.Group>
+               <Button className="loginButton"
+                id="login"
+                type="submit"
+                disabled={!isEnabled}
+                onClick={()=>this.handleSubmit}>
+                Login
+                </Button> 
+                      
+                
+              </Form>
+              <div className="login-help">
+                  <a href="#">Register</a> - <a href="#">Forgot Password</a>
+              </div>
+
+              
+          </div>
+       </div>
+          
+
+      );
+  }}
  
 Login.propTypes = {
-  email: PropTypes.string,
+
+  user: PropTypes.string,
 };
 function mapStateToProps(state) {
   return {

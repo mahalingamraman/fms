@@ -1,0 +1,48 @@
+.Datepick{
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    text-decoration-color: navajowhite
+}
+
+.CardTop{
+    color:teal;
+    width: '75rem';
+    margin-top: "70px";
+    border-radius:4px;
+    box-shadow: 2;
+    
+}
+
+.CardHead{
+    /* margin-top: 1cm; */
+    margin-left: 1cm;
+    margin-right: 1cm;
+    background-color: '#FAB914';
+    color:black;
+    align-self: auto;
+    font-size: 0.5cm;
+    font-weight: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.TextBox{
+    margin-left: 1cm;
+    border: 1px solid yellowgreen;
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
+  padding: 12px 5px 12px 10px;
+}
+
+.Label{
+    margin-left: 1cm;
+    
+}
+
+.Btncolor{
+    background-color: yellowgreen;
+    color:white;
+}
+.rows .row {
+    display: inline;
+ }

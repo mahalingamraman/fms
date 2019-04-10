@@ -23,6 +23,17 @@ import form7Reducer from './oht/velocity_form_reducers/form7Reducer';
 import form8Reducer from './oht/velocity_form_reducers/form8Reducer';
 import form9Reducer from './oht/velocity_form_reducers/form9Reducer';
 
+
+import peopleFabReducer from './fab/peopleReducer';
+import qualityFabReducer from './fab/qualityReducer';
+import velocityFabReducer from './fab/velocityReducer';
+import costFabReducer from './fab/costReducer';
+import FramePDIFabReducer from './fab/FramePDIReducer';
+import BHLFabReducer from './fab/BHLReducer';
+import BuildFabReducer from './fab/BuildReducer';
+import MPSFabReducer from './fab/MPSReducer';
+
+
 const rootReducer = combineReducers({
     loginReducer: loginReducer,
     homeReducer: homeReducer,
@@ -45,6 +56,15 @@ const rootReducer = combineReducers({
     form7Reducer:form7Reducer,
     form8Reducer:form8Reducer,
     form9Reducer:form9Reducer,
+	
+	peopleFabReducer:peopleFabReducer,
+    qualityFabReducer:qualityFabReducer,
+    velocityFabReducer:velocityFabReducer,
+    costFabReducer:costFabReducer,
+    FramePDIFabReducer:FramePDIFabReducer,
+    BHLFabReducer:BHLFabReducer,
+    BuildFabReducer:BuildFabReducer,
+    MPSFabReducer:MPSFabReducer
 });
 
 export default rootReducer;

@@ -1,0 +1,87 @@
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    opacity: 1;
+    /* background-image: url("http://hdwpro.com/wp-content/uploads/2018/01/hd-blur-wallpaper.jpg"); */
+
+    background-color: gainsboro;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+   
+  }
+   
+  .sidebar a.active {
+    background-color: cadetblue;
+    opacity: 0.7;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: cadetblue;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+    
+   
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      opacity: 0.7;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  /* Style the content */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+  }
+  .navicon{
+    padding-bottom: 0.2cm;
+    padding-right: 5px;
+  }
+
+  .logouticon{
+    padding-bottom: 0.3cm;
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-top: 8px;
+    height:20;
+    width: 20;
+  }
+
+  
+  .homeicon{
+    padding-bottom: 0.3cm;
+    padding-right: 9px;
+    padding-left: 9px;
+    padding-top: 8px;
+    height:20;
+    width: 20;
+  }

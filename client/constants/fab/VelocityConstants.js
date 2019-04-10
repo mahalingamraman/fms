@@ -1,0 +1,13 @@
+export const TOGGLE_1='TOGGLE_1';
+export const TOGGLE_2='TOGGLE_2';
+export const TOGGLE_3='TOGGLE_3';
+export const TOGGLE_4="TOGGLE_4";
+export const TOGGLE_5='TOGGLE_5';
+export const TOGGLE_6='TOGGLE_6';
+export const TOGGLE_7='TOGGLE_7';
+export const TOGGLE_8='TOGGLE_8';
+export const TOGGLE_9='TOGGLE_9';
+export const EXPAND_ALL='EXPAND_ALL';
+export const COLLAPSE_ALL='COLLAPSE_ALL';
+export const NEXT='NEXT';
+export const PREV='PREV';

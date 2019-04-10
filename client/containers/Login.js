@@ -52,7 +52,7 @@ class Login extends Component {
        return;
     }
     else{
-      this.setState({redirect:true});
+      this.props.history.push("/home");
   }
   alert(`Signed up with username: ${username} `);
   event.preventDefault();

@@ -79,8 +79,7 @@ class Quality extends React.Component {
   //  console.log(this.state.products);
   };
   handleClick = e => {
-    this.setState({redirect:true});
-  
+    this.props.history.push("/velocity");
   }
   render() {
     if (this.state.redirect) {

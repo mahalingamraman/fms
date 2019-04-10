@@ -81,7 +81,7 @@ class Home extends Component{
           this.setState({ smShow: true });
           return;
         }
-        else{this.setState({redirect:true});
+        else{ this.props.history.push("/people");
       }
       e.preventDefault();
     

@@ -72,7 +72,7 @@ class ShiftManager extends Component {
               this.setState({ smShow: true });
               return;
             }
-            else{this.setState({redirect:true});
+            else{ this.props.history.push("/cost");
       
            
           e.preventDefault();

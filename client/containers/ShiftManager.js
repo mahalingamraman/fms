@@ -26,7 +26,7 @@ function validateForm( OHT,
     ) {
     const errors = [];
 
-        if (OHT.length===0 || UGM.length===0)
+        if (OHT===0 && UGM===0)
         {
             errors.push("entering OHT and UGM is Important!!!");
             

@@ -288,7 +288,7 @@ Velocity.propTypes = {
 };
 function mapStateToProps(state) {
   return {
-    velocity: state.velocityReducer,	
+    velocity: state.velocityOhtReducer,	
   
   }
 }

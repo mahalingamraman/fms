@@ -1,4 +1,4 @@
-import {    HOME } from '../constants/oht/HomeConstants'
+import {HOME } from '../../constants/oht/HomeConstants'
 
 const initialState = {
   shift:"",

@@ -217,7 +217,7 @@ Quality.propTypes = {
 };
 function mapStateToProps(state) {
   return {
-    table: state.qualityReducer	
+    table: state.qualityOhtReducer	
   }
 }
 function mapDispatchToProps(dispatch) {

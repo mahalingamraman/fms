@@ -10,10 +10,10 @@ import { Redirect } from 'react-router';
 
 function validateForm(username) {
   const errors = [];
- 
   const user="lptMachine";
+ 
 
-    if(username.length===0 || username.toLowerCase()!==user.toLowerCase() )
+  if(username.length===0 || username.toLowerCase()!==user.toLowerCase() )
      { 
       
        errors.push("Enter the valid user name");
@@ -45,17 +45,15 @@ class Login extends Component {
 
   handleSubmit = event => {
     this.props.actions.validateUsername(this.state.user);
-
-    const {username}=this.state;
     const errors = validateForm(this.state.user);
     if (errors.length > 0) {
       this.setState({ errors });
        return;
     }
     else{
-     this.props.history.push("/home");
+      this.props.history.push("/home");
   }
-  alert(`Signed up with username: ${username} `);
+  alert(`Signed up with username: ${this.state.user} `);
   event.preventDefault();
 /*
   let isValidUser = this.props.login.isValidUser ?'Valid User':'Invalid USer';

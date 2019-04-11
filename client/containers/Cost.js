@@ -20,8 +20,8 @@ import { bindActionCreators } from 'redux';
 function validateForm(reworkTime,
     rejectionScrapCost) {
     const errors = [];
-        if(reworkTime<0 && 
-            rejectionScrapCost<0)
+        if(reworkTime.length===0 && 
+            rejectionScrapCost.length===0)
         {
           errors.push("Enter Valid Number greater than 0");
         }

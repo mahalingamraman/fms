@@ -17,7 +17,7 @@ import Cost from './containers/Cost';
 import ShiftManager from './containers/ShiftManager';
 
 import OhtAnother from './containers/oht/Another';
-//import Home from './oht/containers/Home';
+import OhtHome from './containers/oht/Home';
 import OhtQuality from './containers/oht/Quality';
 
 import OhtPeople from './containers/oht/People';
@@ -54,6 +54,7 @@ ReactDOM.render(
 			<Route path="/velocityPageTwo" component={ShiftManager}/>
 			<Route path="/cost" component={Cost}/>
 			
+			<Route path="/ohthome" component={OhtHome}/>
 			<Route  path="/ohtother" component={OhtAnother } />
             <Route  path="/ohtpeople" component={OhtPeople}/>
             <Route  path="/ohtquality" component={OhtQuality}/>

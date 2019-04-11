@@ -5,14 +5,15 @@ import peopleReducer from './peopleReducer';
 import qualityReducer from './qualityReducer';
 import velocityReducer from './velocityReducer';
 import velocitySMReducer from './velocitySMReducer';
-
-import costReducer from './oht/costReducer';
+import costReducer from './costReducer';
 //import loginReducer from './loginReducer';
 //import homeReducer from './homeReducer';
+import homeReducerOHT from './oht/homeReducer';
 import peopleOhtReducer from './oht/peopleReducer';
 import qualityOhtReducer from './oht/qualityReducer';
 import velocityOhtReducer from './oht/velocityReducer';
 import anotherOhtReducer from './oht/anotherReducer';
+import costOhtReducer from "./oht/costReducer";
 import form1Reducer from './oht/velocity_form_reducers/form1Reducer';
 import form2Reducer from './oht/velocity_form_reducers/form2Reducer';
 import form3Reducer from './oht/velocity_form_reducers/form3Reducer';
@@ -43,9 +44,11 @@ const rootReducer = combineReducers({
     velocitySMReducer:velocitySMReducer,
     costReducer:costReducer,
 	
-	peopleOhtReducer:peopleOhtReducer,
+    homeReducerOHT:homeReducerOHT,
+    peopleOhtReducer:peopleOhtReducer,
     qualityOhtReducer:qualityOhtReducer,
     velocityOhtReducer:velocityOhtReducer,
+    costOhtReducer:costOhtReducer,
     anotherOhtReducer:anotherOhtReducer,
     form1Reducer:form1Reducer,
     form2Reducer:form2Reducer,

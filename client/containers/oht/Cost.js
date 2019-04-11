@@ -40,7 +40,7 @@ class Cost extends Component {
       }
     Validation(event,values){
         this.props.actions.saveCostValues(this.state);
-        this.context.router.history.push("/quality");
+        this.context.router.history.push("/ohtquality");
     }
     fieldValidate(value){
         console.log(value)
@@ -144,7 +144,7 @@ Cost.propTypes = {
   };
   function mapStateToProps(state) {
     return {
-      cost: state.costReducer,	
+      cost: state.costOhtReducer,	
     
     }
   }

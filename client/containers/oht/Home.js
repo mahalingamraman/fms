@@ -51,7 +51,7 @@ class Home extends Component {
         // console.log(state1);
         // this.props.unhide_action.unhidePeople();
         console.log(this.props)
-        this.context.router.history.push("/people");
+        this.context.router.history.push("/ohtpeople");
     }
     onChange(e){
         this.setState({[e.target.name]:e.target.value});
@@ -148,7 +148,7 @@ Home.propTypes = {
   };
   function mapStateToProps(state) {
     return {
-      home: state.homeReducer,	
+      home: state.homeReducerOHT,	
       login:state.loginReducer
     }
   }

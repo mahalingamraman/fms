@@ -61,7 +61,7 @@ class People extends Component {
         console.log(this.state.reason_injury)
         this.props.actions.savePeopleValues(this.state.no_of_operators,this.state.no_of_apprentice,this.state.no_of_agency,this.state.injury_free,this.state.reason_injury);
         // this.props.unhide_action.unhideAll();
-        this.context.router.history.push("/quality");
+        this.context.router.history.push("/ohtquality");
     }
     onChange(e){
         // console.log(e.target.no_of_operators);
@@ -149,8 +149,8 @@ People.propTypes = {
   };
   function mapStateToProps(state) {
     return {
-      people: state.peopleReducer,	
-      home:state.homeReducer,
+      people: state.peopleOhtReducer,	
+      home:state.homeOhtReducer,
 
     }
   }

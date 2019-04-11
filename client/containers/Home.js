@@ -30,17 +30,18 @@ import { bindActionCreators } from 'redux';
 }*/
 function validateForm(selectedDay,shift,supervisor) {
   const errors = [];
-      if(selectedDay.length<=0)
+      if(selectedDay.length===0)
       {
         errors.push("DATE !!!!");
       }
-      if (shift.length<=0)
+      if (shift.length===0)
       {
+         
           errors.push("Please select a shift");
           
       }
 
-      if (supervisor.length<=0)
+      if (supervisor.length===0)
       {
           errors.push("Please select a supervisor");
           
@@ -50,8 +51,8 @@ function validateForm(selectedDay,shift,supervisor) {
  }
  
 class Home extends Component{
-  constructor(props,context) {
-      super(props, context);
+  constructor(props) {
+      super(props);
 
 
       this.state = {
@@ -92,7 +93,7 @@ class Home extends Component{
               // some action...
               // then redirect
              
-              this.setState({redirect: true});
+              
             }
     
   render()
@@ -178,7 +179,7 @@ class Home extends Component{
                               
                                                   id="proceed"
                                                   type="submit"
-                                                  onClick={()=>this.handleOnClick}>
+                                                 >
                                                   Proceed
                                                   </Button> 
                                                   </Col>                          
@@ -233,8 +234,9 @@ class Home extends Component{
  
       
 Home.propTypes = {
-  classes: PropTypes.object.isRequired,
-  text: PropTypes.string,
+ selectedDay:PropTypes.string,
+ shift:PropTypes.string,
+ supervisor:PropTypes.string
   };
   
 function mapStateToProps(state) {

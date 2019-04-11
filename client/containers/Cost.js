@@ -31,8 +31,8 @@ function validateForm(reworkTime,
    }
  
    class Cost extends Component{
-    constructor(props,context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
 
  
         this.state = {
@@ -142,7 +142,7 @@ function validateForm(reworkTime,
                  <Card.Footer>
                  <Row>
                      <Col>
-                     <Button  id="costsave" type="submit" className="pull-right"
+                     <Button  id="costsave" type="submit" className="saveButton"
                                                      onClick={()=>this.handleSubmit} >Save</Button>
                           
                      </Col>
@@ -224,9 +224,8 @@ function validateForm(reworkTime,
                                                   </Col>*/
 
                                                     Cost.propTypes = {
-                                                      classes: PropTypes.object.isRequired,
-                                                      text: PropTypes.string,
-                                                  
+                                                      reworkTime:PropTypes.number,
+                                                      rejectionScrapCost:PropTypes.number,
                                                   };
                                                   function mapStateToProps(state) {
                                                     return {

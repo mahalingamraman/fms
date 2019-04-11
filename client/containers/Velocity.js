@@ -15,6 +15,8 @@ import PropTypes from 'prop-types';
 import * as VelocityActions from '../actions/velocity';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import {  IoIosArrowDroprightCircle} from "react-icons/io";
+import { IconContext } from "react-icons";
 
 
 function validateForm(machinePlan,
@@ -38,8 +40,8 @@ function validateForm(machinePlan,
 
 
 class Velocity extends Component {
-  constructor(props,context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
         open: true,
       errors:[] ,
@@ -237,7 +239,13 @@ class Velocity extends Component {
                 <Card.Footer> <Row>
                 <Col>
                 <Button  id="proceedToVel" type="submit" className="pull-right"
-                                                onClick={()=>this.handleSubmit} >Next</Button>
+                                                onClick={()=>this.handleSubmit} > 
+                                            <IconContext.Provider value={{ className: "global-class-name" }}>
+                                                <div>
+                                                
+                                                <IoIosArrowDroprightCircle size="25px"/>
+                                                </div>
+                                              </IconContext.Provider></Button>
                      
                 </Col>
 
@@ -292,8 +300,13 @@ class Velocity extends Component {
 
 
                Velocity.propTypes = {
-                classes: PropTypes.object.isRequired,
-                text: PropTypes.string,
+                machinePlan:PropTypes.number ,
+                machineRun:PropTypes.number,
+                DeburingCompleted:PropTypes.number,
+                OPhrs:PropTypes.number ,
+                machinePlan1:PropTypes.number ,
+                machineRun1:PropTypes.number,
+                OPhrs1:PropTypes.number,
                   
                   };
                   function mapStateToProps(state) {

@@ -15,6 +15,8 @@ import PropTypes from 'prop-types';
 import * as VelocityActions from '../actions/velocitySM';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import {  IoIosArrowDroprightCircle} from "react-icons/io";
+import { IconContext } from "react-icons";
 
 
 function validateForm( OHT,
@@ -24,9 +26,9 @@ function validateForm( OHT,
     ) {
     const errors = [];
 
-        if (OHT===0 && UGM===0)
+        if (OHT.length===0 || UGM.length===0)
         {
-            errors.push("entering O/P Hrs is Important!!!");
+            errors.push("entering OHT and UGM is Important!!!");
             
         }
       
@@ -35,8 +37,8 @@ function validateForm( OHT,
 
 
 class ShiftManager extends Component {
-  constructor(props,context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
         open: true,
       errors:[],
@@ -110,7 +112,7 @@ class ShiftManager extends Component {
          
         <Collapse in={this.state.open}>
       <div id="example-collapse-text">
-      <Form onSubmit={this.handleSubmit} className="formvelocity">
+      <Form onSubmit={this.handleShiftSubmit} className="formvelocity">
 
      
          
@@ -176,14 +178,7 @@ class ShiftManager extends Component {
                                                                 </Col>
                                                 </Row>
 
-                                                <Row>
-                                                    <Col>
-                                                     
-                                                        <Button  id="proceed"
-                                                                        type="submit" 
-                                                                        onClick={this.handleShiftSubmit} >Save</Button>
-                                                    </Col>
-                                                </Row>
+                                               
 
                                                 </Col>
                                                 </Row>
@@ -196,7 +191,13 @@ class ShiftManager extends Component {
                 <Card.Footer> <Row>
                 <Col>
                 <Button  id="proceedToVel" type="submit" className="pull-right"
-                                                onClick={()=>this.handleShiftSubmit} >Next</Button>
+                                                >
+                                                <IconContext.Provider value={{ className: "global-class-name" }}>
+                                                <div>
+                                                
+                                                <IoIosArrowDroprightCircle size="25px"/>
+                                                </div>
+                                              </IconContext.Provider></Button>
                      
                 </Col>
 
@@ -250,8 +251,11 @@ class ShiftManager extends Component {
 
 
                ShiftManager.propTypes = {
-                classes: PropTypes.object.isRequired,
-                text: PropTypes.string,
+                OHT:PropTypes.number ,
+                UGM:PropTypes.number,
+                PendingForRework:PropTypes.number ,
+                PartsPending:PropTypes.number ,
+                CriticalIssues:PropTypes.string,
                   
                   };
                   function mapStateToProps(state) {

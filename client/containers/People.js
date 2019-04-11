@@ -16,6 +16,9 @@ import * as PeopleActions from '../actions/people';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import {  IoIosArrowDroprightCircle} from "react-icons/io";
+import { IconContext } from "react-icons";
+
 
 
 function validateForm(sm_six,
@@ -34,8 +37,8 @@ function validateForm(sm_six,
    }
 
 class People extends Component {
-  constructor(props,context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.state = {
         open: true,
       errors:[],
@@ -59,7 +62,7 @@ class People extends Component {
 
     
     handleSubmit = e => {
-        this.props.actions.validatePeople(this.state.sm_six,this.state.opwd,this.state.opwod,this.state.Apprentice,this.state.Agency,this.state.Injure,this.state.sm_eight,this.state.opwd1,this.state.opwod1,this.state.Apprentice1,this.state.Agency1);
+        this.props.actions.validatePeoplePage(this.state.sm_six,this.state.opwd,this.state.opwod,this.state.Apprentice,this.state.Agency,this.state.Injure,this.state.sm_eight,this.state.opwd1,this.state.opwod1,this.state.Apprentice1,this.state.Agency1);
 
 
         const { sm_six,
@@ -67,16 +70,23 @@ class People extends Component {
     
         const errors = validateForm(sm_six,
             sm_eight);
+            
         if (errors.length > 0) {
           this.setState({ errors });
           this.setState({ smShow: true });
           return;
         }
-        else{ this.props.history.push("/quality");;
+        else{ this.props.history.push("/quality");
       }
       e.preventDefault();
     
         // submit the data...
+      }
+      handleOnClick = () => {
+        // some action...
+        // then redirect
+       
+       
       }
 
     render() {
@@ -280,8 +290,14 @@ class People extends Component {
             <Card.Footer>
             <Row>
                 <Col>
-                <Button  id="proceedToVel" type="submit" className="pull-right"
-                                                onClick={()=>this.handleSubmit} >Next</Button>
+                <Button  id="proceedToVel" type="submit" className="pull-right"> 
+                                                <IconContext.Provider value={{ className: "global-class-name" }}>
+                                                <div>
+                                                
+                                                <IoIosArrowDroprightCircle size="25px"/>
+                                                </div>
+                                              </IconContext.Provider>
+                  </Button>
                      
                 </Col>
 
@@ -326,8 +342,17 @@ class People extends Component {
 }}
 
 People.propTypes = {
-  classes: PropTypes.object.isRequired,
-  text: PropTypes.string,
+      sm_six:PropTypes.string,
+      sm_eight:PropTypes.string,
+      opwd:PropTypes.number,
+      opwod:PropTypes.number,
+      Apprentice:PropTypes.number,
+      Agency:PropTypes.number,
+      Injure:PropTypes.string,
+      opwd1:PropTypes.number,
+      opwod1:PropTypes.number,
+      Apprentice1:PropTypes.number,
+      Agency1:PropTypes.number,
   
   };
   function mapStateToProps(state) {

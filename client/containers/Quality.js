@@ -282,8 +282,8 @@ class EditableCellOne extends React.Component {
 
 
 Quality.propTypes = {
-  classes: PropTypes.object.isRequired,
-  text: PropTypes.string,
+  products:PropTypes.array,
+  filterText:PropTypes.string
   };
   function mapStateToProps(state) {
     return {

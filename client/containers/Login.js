@@ -13,20 +13,21 @@ function validateForm(username) {
  
   const user="lptMachine";
 
-    if(username.length===0 || username.toUpperCase()!==user.toUpperCase() )
+    if(username.length===0 || username.toLowerCase()!==user.toLowerCase() )
      { 
+      
        errors.push("Enter the valid user name");
-     
+    
      }
      
     return errors;
   }
       
-
-
+ 
+ 
 class Login extends Component {
-  constructor(props,context) {
-    super(props,context);
+  constructor(props) {
+    super(props);
           //newly added
 
     this.state = {
@@ -35,7 +36,7 @@ class Login extends Component {
      isEnabled:false,
       };
   }
- 
+  
  
   handleChange(e) {
 	console.log(e.target.value);
@@ -52,7 +53,7 @@ class Login extends Component {
        return;
     }
     else{
-      this.props.history.push("/home");
+     this.props.history.push("/home");
   }
   alert(`Signed up with username: ${username} `);
   event.preventDefault();
@@ -123,6 +124,7 @@ Login.propTypes = {
 
   user: PropTypes.string,
 };
+
 function mapStateToProps(state) {
   return {
     login: state.loginReducer	

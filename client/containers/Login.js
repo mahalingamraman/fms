@@ -74,8 +74,7 @@ componentWillUpdate(){
 	else if(this.props.login.user == 'lptmachine')
 			this.props.history.push("/home");
 	else if(this.props.login.user == 'fab')
-			this.props.history.push("/fabother");
-	}
+			this.props.history.push("/fabhome");	}
 }
 render(){
   //redirect is not working

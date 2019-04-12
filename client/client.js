@@ -26,6 +26,7 @@ import OhtCost from './containers/oht/Cost';
 //import OhtSideNav_ from './containers/oht/SideNav_';
 
 import FabAnother from './containers/fab/Another';
+import FabHome from './containers/fab/Home';
 import FabQuality from './containers/fab/Quality';
 import FabFramePDI from './containers/fab/FramePDI';
 import FabPeople from './containers/fab/People';
@@ -61,6 +62,8 @@ ReactDOM.render(
             <Route path="/ohtvelocity" component={OhtVelocity}/>
             <Route  path="/ohtcost" component={OhtCost}/>
 			
+
+			<Route  path="/fabhome" component={FabHome } />	
 			<Route  path="/fabother" component={FabAnother } />
             <Route  path="/fabpeople" component={FabPeople}/>
             <Route  path="/fabqualitytable" component={FabTable}/>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Fms.css'
 
 import PropTypes from 'prop-types';
-import * as HomeActions from '../actions/home'
+import * as HomeActions from '../../actions/fab/home'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
@@ -11,7 +11,7 @@ import { AvForm, AvInput,AvField,AvGroup} from 'availity-reactstrap-validation';
 import {ResponsiveEmbed, Image} from 'react-bootstrap';
 
 import "react-datepicker/dist/react-datepicker.css";
-import Sidenav from "../components/Sidenav";
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -42,7 +42,7 @@ class Home extends Component {
         // console.log(state1);
         console.log(this.props)
         
-        this.context.router.history.push("/people");
+        this.context.router.history.push("/fabpeople");
     }
     onChange(e){
         this.setState({[e.target.name]:e.target.value});

@@ -71,11 +71,12 @@ class NavBar extends Component {
 			</Nav>): ''}
 			{this.props.login.user == 'lptmachine'?
 			(<Nav>
-				<Nav><Link to="/home">Home</Link></Nav>
-				<Nav><Link to="/people">People</Link></Nav>
-				<Nav><Link to="/quality">Quality</Link></Nav>
-				<Nav><Link to="/velocity">Velocity</Link></Nav>
-				<Nav><Link to="/cost">Cost</Link></Nav>
+				<Nav><Link to="/home" ><IconCnt_><Icon icon={ic_home} /> Home <t/> </IconCnt_></Link></Nav>
+				<Nav><Link to="/people" ><IconCnt_><Icon icon={ic_people} /> People <t/></IconCnt_></Link></Nav>
+        <Nav><Link to="/quality"><IconCnt_><Icon icon={ic_thumb_up} /> Quality <t/></IconCnt_></Link></Nav>
+        <Nav><Link to="/velocity" ><IconCnt_><Icon icon={ic_directions_run} />Velocity <t/></IconCnt_></Link></Nav>
+        <Nav><Link to="/cost" ><IconCnt_><Icon icon={ic_monetization_on} />Cost <t/></IconCnt_></Link></Nav>
+			
 			</Nav>): ''}
 			{this.props.login.user == 'fab'?
 			(<Nav>	

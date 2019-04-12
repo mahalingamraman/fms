@@ -53,7 +53,6 @@ class Cost extends Component {
     render() {
         return (
             <div class="content">
-                <NavBar/>
             <div style={{marginLeft:"20px"}}>
             =
                 <Card style={{

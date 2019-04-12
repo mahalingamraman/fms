@@ -57,7 +57,6 @@ class PeopleForm extends Component {
         const { open } = this.state;
         return (
             <div className="Container">
-                <NavBar />
               
        
           

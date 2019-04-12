@@ -11,9 +11,7 @@ import { Redirect } from 'react-router';
 function validateForm(username) {
   const errors = [];
   const user="lptMachine";
- 
-
-  if(username.length===0 || username.toLowerCase()!==user.toLowerCase() )
+  if(username.length===0 )
      { 
       
        errors.push("Enter the valid user name");
@@ -44,17 +42,16 @@ class Login extends Component {
   }
 
   handleSubmit = event => {
-    this.props.actions.validateUsername(this.state.user);
+	event.preventDefault();
     const errors = validateForm(this.state.user);
     if (errors.length > 0) {
       this.setState({ errors });
        return;
-    }
-    else{
-      this.props.history.push("/home");
-  }
-  alert(`Signed up with username: ${this.state.user} `);
-  event.preventDefault();
+    }else {
+	this.props.actions.validateUsername(this.state.user);
+	}
+    
+ 
 /*
   let isValidUser = this.props.login.isValidUser ?'Valid User':'Invalid USer';
     if(isValidUser==='Valid User')
@@ -68,7 +65,18 @@ class Login extends Component {
     
    
   }
+componentWillUpdate(){
 
+	if(this.props.login.isValidUser){
+		console.log(this.props.login);
+	if(this.props.login.user == 'oht')
+			this.props.history.push("/ohthome");
+	else if(this.props.login.user == 'lptmachine')
+			this.props.history.push("/home");
+	else if(this.props.login.user == 'fab')
+			this.props.history.push("/fabother");
+	}
+}
 render(){
   //redirect is not working
   if (this.state.redirect) {

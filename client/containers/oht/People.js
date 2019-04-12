@@ -14,7 +14,6 @@ import * as LoginActions from '../../actions/oht/login'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import "react-datepicker/dist/react-datepicker.css";
-import NavBar from "../../components/oht/NavBar";
 class People extends Component {
     constructor(props) {
         super(props);
@@ -59,7 +58,7 @@ class People extends Component {
     render() {
         return (
             <div>
-            <NavBar/>
+ 
             <div >
             <Container responsive>
                 <Card >

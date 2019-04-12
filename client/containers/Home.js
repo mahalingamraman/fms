@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import HeaderTAB from '../containers/header';
 import '../css/header.css';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
@@ -109,7 +108,6 @@ class Home extends Component{
       return(
         
         <div className="includeHeader">
-        <HeaderTAB /> 
         
       
           <Card  className="htpage">

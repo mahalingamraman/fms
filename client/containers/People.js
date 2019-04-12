@@ -7,7 +7,6 @@ import Collapse from 'react-bootstrap/Collapse';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import HeaderTAB from "./header";
 import Modal from 'react-bootstrap/Modal';
 
 import PropTypes from 'prop-types';
@@ -98,7 +97,6 @@ class People extends Component {
       }
     return(
       <div>
-       <HeaderTAB/>
        <div className="includeHeader">
           <h3>PEOPLE</h3>
         <Card className="peoppage">

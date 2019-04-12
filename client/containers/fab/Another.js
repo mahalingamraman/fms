@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Row, Col, Nav, Navbar, NavDropdown, FormControl, Form, Card } from 'react-bootstrap'
 import DatePicker from "react-datepicker";
-import NavBar from "../../components/fab/NavBar";
+
 
 class Another extends Component {
     constructor(props){
@@ -9,7 +9,6 @@ class Another extends Component {
     }
   render() {
     return ( <div className="Another">
-    <NavBar/>
       <Card bg="warning" border="light" style={{
                     width: '75rem',
                     marginTop: "70px"

@@ -62,7 +62,7 @@ class Quality extends Component {
 
     return (
       <div>
-        <NavBar/>
+ 
       
       <div style={{marginLeft:"40px", marginTop:'30px',  alignItems: "center" ,justifyContent: "center"}}>
         <Row>

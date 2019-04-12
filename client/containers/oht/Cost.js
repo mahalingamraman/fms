@@ -11,8 +11,6 @@ import DatePicker from "react-datepicker";
 // var DatePicker = require("react-bootstrap-date-picker");
 import PropTypes from 'prop-types';
 import "react-datepicker/dist/react-datepicker.css";
-import NavBar from "../../components/oht/NavBar";
-
 import * as CostActions from '../../actions/oht/cost'
 import * as LoginActions from '../../actions/oht/login'
 import { connect } from 'react-redux';
@@ -59,7 +57,7 @@ class Cost extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
+      
             <div style={{marginLeft:"20px"}}>
             <Container>
                 <Card className="card-user" 

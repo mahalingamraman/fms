@@ -45,7 +45,7 @@ class NavBar extends Component {
 
   }
   logout(e) {
-    e.preventDefault();
+	  this.props.history.push("/");
     this.context.router.history.push("/");
   }
 
@@ -58,25 +58,27 @@ class NavBar extends Component {
             <Navbar.Brand href="#home">FMS</Navbar.Brand>
             <Nav className="mr-auto">
               {/* <li> */}
-              <Nav ><Link to="/home" ><IconCnt_>
+              <Nav ><Link to="/ohthome" ><IconCnt_>
                 <Icon icon={ic_home} /> Home  
                                     </IconCnt_></Link>&nbsp;&nbsp;&nbsp;&nbsp;</Nav>
-              <Nav><Link to="/people" ><IconCnt_>
+              <Nav><Link to="/ohtpeople" ><IconCnt_>
                 <Icon icon={ic_people} /> People<t/>
                                     </IconCnt_></Link>&nbsp;&nbsp;&nbsp;&nbsp;</Nav>
-                <Nav><Link to="/quality"><IconCnt_>
+                <Nav><Link to="/ohtquality"><IconCnt_>
                   <Icon icon={ic_thumb_up} /> Quality<t/>
                                     </IconCnt_></Link>&nbsp;&nbsp;&nbsp;&nbsp;</Nav>
-                  <Nav><Link to="/velocity" ><IconCnt_>
+                  <Nav><Link to="/ohtvelocity" ><IconCnt_>
                     <Icon icon={ic_directions_run} />Velocity<t/>
                                     </IconCnt_></Link>&nbsp;&nbsp;&nbsp;&nbsp;</Nav>
-                    <Nav><Link to="/cost" ><IconCnt_>
+                    <Nav><Link to="/ohtcost" ><IconCnt_>
                       <Icon icon={ic_monetization_on} />Cost<t/>
                                     </IconCnt_></Link>&nbsp;&nbsp;&nbsp;&nbsp;</Nav>
-                      <Nav><Link to="/other" ><IconCnt_>
+                      <Nav><Link to="/ohtother" ><IconCnt_>
                         <Icon icon={ic_question_answer} />Report<t/>
                                     </IconCnt_></Link>&nbsp;</Nav>
                         {/* </li> */}
+                      </Nav>
+					  <Nav><Link to="/" >Logout</Link>
                       </Nav>
                       {/* <Form inline>
   <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}

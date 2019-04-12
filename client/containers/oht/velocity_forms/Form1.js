@@ -177,7 +177,6 @@
 // export default Form1;
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap'
-import NavBar from "../../../components/oht/NavBar";
 import { BootstrapTable, TableHeaderColumn,DeleteButton } from 'react-bootstrap-table';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import * as Form1Actions from '../../../actions/oht/velocity_forms_actions/form1'

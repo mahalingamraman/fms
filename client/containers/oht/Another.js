@@ -25,7 +25,7 @@ import { ic_edit } from "react-icons-kit/md/ic_edit";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import "react-datepicker/dist/react-datepicker.css";
-import NavBar from "../../components/oht/NavBar";
+
 const IconCnt_ = styled.div`
 color: #fff;
   display: flex;
@@ -79,7 +79,7 @@ class People extends Component {
     render() {
         return (
             <div>
-            <NavBar/>
+            
             <div >
             <Container responsive>
                 <Card >
@@ -112,13 +112,13 @@ class People extends Component {
           {/* <Sonnet /> */}
           <ListGroup>
         <ListGroup.Item >
-          <p>Date: {this.props.home.date}      <Button onClick={this.lala} style={{backgroundColor:"black", borderRadius:"4"}}><IconCnt_>
+          <p>Date: {this.props.home?this.props.home.date:''}      <Button onClick={this.lala} style={{backgroundColor:"black", borderRadius:"4"}}><IconCnt_>
                                         <Icon icon={ic_edit} />
                                     </IconCnt_></Button></p>
           
         </ListGroup.Item>
         <ListGroup.Item action href="#shift">
-        <p>Shift: {this.props.home.shift}</p>
+        <p>Shift: {this.props.home?this.props.home.shift:''}</p>
           <Button onClick={this.lala}>Edit</Button>
         </ListGroup.Item>
         

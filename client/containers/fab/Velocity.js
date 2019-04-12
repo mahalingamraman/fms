@@ -104,7 +104,7 @@ import { bindActionCreators } from 'redux'
     //   <ListGroup>
     //     <ListGroupItem color="success">
         <div>
-          <NavBar/>
+  
             <br/>
             <br/>
             <br/>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button ,Container} from 'react-bootstrap'
-import NavBar from "../../components/oht/NavBar";
 import { BootstrapTable, TableHeaderColumn ,DeleteButton} from 'react-bootstrap-table';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import * as QualityActions from '../../actions/oht/quality'
@@ -161,7 +160,6 @@ onAfterSaveCell(row, cellName, cellValue) {
 
   render() {
     return (<div className="Quality">
-      <NavBar />
 
       <div style={{overflowX:"auto"}}>
       <Container responsive>

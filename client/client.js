@@ -39,13 +39,13 @@ import FabCostpage from './containers/fab/Costpage';
 import FabBHLform from './containers/fab/BHLform';
 import FabBuildmissform from './containers/fab/Buildmissform';
 import FabMPSStatus from './containers/fab/MPSStatus';
-
+import Header from "./components/common/header";
 
 ReactDOM.render(
 	<Provider store={appStore}>
 		<Router>
 			<div>
-			              
+			<p><Header/></p>
 			<Route exact path="/" component={Login}/>
 			<Route path="/home" component={Home}/>
 			<Route path="/people" component={People}/>

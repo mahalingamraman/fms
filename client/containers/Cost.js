@@ -7,7 +7,7 @@ import Collapse from 'react-bootstrap/Collapse';
 import '../css/Cost.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import HeaderTAB from './header';
+
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import PropTypes from 'prop-types';
@@ -89,7 +89,7 @@ function validateForm(reworkTime,
         return(
           
             <div>
-            <HeaderTAB/>
+       
             <div className="includeHeader">
             <h4>COST</h4>
              <Card className="costpage">

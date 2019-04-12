@@ -10,7 +10,6 @@ import Form6 from "./velocity_forms/Form6"
 import Form7 from "./velocity_forms/Form7"
 import Form8 from "./velocity_forms/Form8"
 import Form9 from "./velocity_forms/Form9"
-import NavBar from "../../components/oht/NavBar"
 import PropTypes from 'prop-types';
 import * as VelocityActions from '../../actions/oht/velocity'
 import { connect } from 'react-redux';
@@ -43,7 +42,7 @@ import { bindActionCreators } from 'redux'
     //   <ListGroup>
     //     <ListGroupItem color="success">
         <div>
-          <NavBar/>
+    
             <br/>
             <br/>
             <br/>

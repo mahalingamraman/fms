@@ -1,6 +1,5 @@
 
 /*this contains the quality page with form control which get dfect  */
-import HeaderTAB from './header';
 import Card from 'react-bootstrap/Card';
 import React from 'react';
 import Row from 'react-bootstrap/Row';
@@ -92,8 +91,7 @@ class Quality extends React.Component {
     
     return (
       <div>
-     
-      <HeaderTAB/>
+    
       <div className="includeHeader">
       <h4>QUALITY LIST</h4>
        <Card className="qualitypage">

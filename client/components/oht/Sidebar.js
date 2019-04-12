@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 // import { Nav } from "reactstrap";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
@@ -68,18 +68,20 @@ class Sidebar extends React.Component {
 <Nav className="mr-auto">
 <li>
 <li>
-  <Nav.Link className="nav-link" activeClassName="active" href="/home" >Home</Nav.Link>
+  <Nav> <Link className="nav-link" activeClassName="active" to="/ohthome" >Home</Link></Nav>
   </li>
   <li>
-  <Nav.Link className="nav-link" activeClassName="active"  href="/people" >People</Nav.Link></li>
+  <Nav><Link className="nav-link" activeClassName="active"  to="/ohtpeople" >People</Link></Nav></li>
   <li>
-  <Nav.Link className="nav-link" activeClassName="active"  href="/quality">Quality</Nav.Link></li>
+  <Nav><Link className="nav-link" activeClassName="active"  to="/ohtquality">Quality</Link></Nav></li>
   <li>
-  <Nav.Link className="nav-link" activeClassName="active"  href="/velocity" >Velocity</Nav.Link></li>
+  <Nav><Link className="nav-link" activeClassName="active"  to="/ohtvelocity" >Velocity</Link></Nav></li>
   <li>
-  <Nav.Link className="nav-link" activeClassName="active"  href="/cost" >Cost</Nav.Link></li>
+  <Nav><Link className="nav-link" activeClassName="active"  to="/ohtcost" >Cost</Link></Nav></li>
   <li>
-  <Nav.Link className="nav-link" activeClassName="active"  href="/other" >Report</Nav.Link></li>
+  <Nav><Link className="nav-link" activeClassName="active"  to="/ohtother" >Report</Link></Nav></li>
+  <li>
+  <Nav><Link className="nav-link" activeClassName="active"  to="/" >Logout</Link></Nav></li>
   </li>
 </Nav>
 </div>

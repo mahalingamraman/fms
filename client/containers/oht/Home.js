@@ -17,10 +17,8 @@ import DatePicker from "react-datepicker";
 // var DatePicker = require("react-bootstrap-date-picker");
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import "react-datepicker/dist/react-datepicker.css";
-import NavBar from "../../components/oht/NavBar";
 class Home extends Component {
     constructor(props) {
-
         super(props);
         this.props.unhide_action.hideAll();
         this.props.unhide_action.hidePeople();
@@ -62,11 +60,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-             <Sidebar
-          {...this.props}
-       
-        />
-        {/* <NavBar/> */}
+      
         <div >
             
            

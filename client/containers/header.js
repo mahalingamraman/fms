@@ -18,15 +18,14 @@ export default class HeaderTAB extends React.Component {
         <Navbar className="headerBody">
             <div className="tabSel">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/home">Home</Nav.Link>
-                    <Nav.Link href="/people">People</Nav.Link>
-                    <Nav.Link href="/quality">Quality</Nav.Link>
-                    <Nav.Link href="/velocity">Velocity</Nav.Link>
-                    <Nav.Link href="/cost">Cost</Nav.Link>
+                    <Nav><Link href="/home">Home</Link></Nav>
+                    <Nav><Link href="/people">People</Link></Nav>
+                    <Nav><Link href="/quality">Quality</Link></Nav>
+                    <Nav><Link href="/velocity">Velocity</Link></Nav>
+                    <Nav><Link href="/cost">Cost</Link></Nav>
                 </Nav>
             </div>
         </Navbar>
-       
         </div>
       );
     }

@@ -130,9 +130,10 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-
-        <input className="searchfield" type="text" placeholder="Search " value={this.props.filterText} ref="filterTextInput" onChange={this.handleChange.bind(this)}/>
-
+       <Form.Group>
+            <Form.Control as="input" className="searchfield" type="text" placeholder="Search " value={this.props.filterText} ref="filterTextInput" onChange={this.handleChange.bind(this)}/>
+      
+        </Form.Group>
       </div>
 
     );
@@ -147,7 +148,7 @@ class ProductTable extends React.Component {
     var rowDel = this.props.onRowDel;
     var filterText = this.props.filterText;
     var product = this.props.products.map(function(product) {
-      if (product.defect_type.indexOf(filterText) === -1) {
+      if (product.defect_note.indexOf(filterText) === -1) {
         return;
       }
       return (<ProductRow onProductTableUpdate={onProductTableUpdate} product={product} onDelEvent={rowDel.bind(this)} key={product.id}/>)
@@ -268,8 +269,10 @@ class EditableCellOne extends React.Component {
   render() {
     return (
       <td>
-          <input type='text' name={this.props.cellData.type} id={this.props.cellData.id} value={this.props.cellData.value} onChange={this.props.onProductTableUpdate}/>
-       
+          <Form.Group>
+          <Form.Control as="input" type='text' name={this.props.cellData.type} id={this.props.cellData.id} value={this.props.cellData.value} onChange={this.props.onProductTableUpdate}/>
+         
+          </Form.Group>
       </td>
     );
 

@@ -20,4 +20,6 @@
 
     .global-class-name{color:black;vertical-align: middle;}
     .pull-right.btn.btn-primary{background:rgba(255, 255, 255, 0.363);border-color: whitesmoke}
+    .searchfield.form-control{position: relative;float:right;width:40%;max-width:30%}
+    
     
